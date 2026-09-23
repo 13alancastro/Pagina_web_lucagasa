@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>IE Colegio Luis Carlos Galán Sarmiento</title>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📍 Municipio de Orocué, Casanare, Colombia</span>
+  <span>📞 350 7696725 - 350 7696726 &nbsp;|&nbsp; ✉️ <a href="mailto:ieluiscarlosgalan@sedcasanare.gov.co">ieluiscarlosgalan@sedcasanare.gov.co</a>  &nbsp;|&nbsp; 🌐 www.lucagasa.edu.co</span>
+</div>
+
+<!-- HEADER -->
+<header>
+ <div class="hdr-left">
+  <img src="/img/logogalan.png" alt="Logo IE Luis Carlos Galán Sarmiento" class="logo-img"/>
+  <div class="hdr-title">
+      <h1>Institución Educativa<br>Colegio Luis Carlos Galán Sarmiento</h1>
+      <p>Esfuerzo y disciplina</p>
+      <span class="hdr-url">🌐 www.lucagasa.edu.co</span>
+    </div>
+  </div>
+  <button class="btn-solicitud" onclick="openModal()">
+    <span>📄</span> Solicitud de Documentos
+  </button>
+</header>
+
+<!-- NAV -->
+<nav>
+  <button class="nav-arrow nav-arrow-left" id="nav-prev" aria-label="Desplazar menú a la izquierda" onclick="scrollNav(-1)">‹</button>
+  <div class="nav-inner" id="nav-inner">
+    <button class="tab-btn active" onclick="showTab('inicio',this)">🏠 Inicio</button>
+    <button class="tab-btn" onclick="showTab('historia',this)">📖 Nuestra Historia</button>
+    <button class="tab-btn" onclick="showTab('mision',this)">🎯 Misión</button>
+    <button class="tab-btn" onclick="showTab('vision',this)">🔭 Visión</button>
+    <button class="tab-btn" onclick="showTab('admin',this)">👥 Cuerpo Administrativo</button>
+    <button class="tab-btn" onclick="showTab('galeria',this)">🖼️ Galería</button>
+    <button class="tab-btn" onclick="showTab('noticias',this)">📰 Noticias y Eventos</button>
+    <button class="tab-btn" onclick="showTab('pqrs',this)">📢 PQRS</button>
+    <button class="tab-btn" onclick="showTab('manual',this)">📘 Manual de Convivencia</button>
+    <button class="tab-btn" onclick="showTab('boletin',this)">📊 Boletín Académico</button>
+    <button class="tab-btn" onclick="showTab('contacto',this)">📞 Contáctanos</button>
+  </div>
+  <button class="nav-arrow nav-arrow-right" id="nav-next" aria-label="Desplazar menú a la derecha" onclick="scrollNav(1)">›</button>
+</nav>
+
+<!-- ═══════════════ PANELS ═══════════════ -->
+
+<!-- INICIO -->
+<div id="panel-inicio" class="panel active">
+  <div class="hero-band" style="padding-bottom:3rem">
+    <p class="eyebrow">Bienvenidos a nuestra comunidad educativa</p>
+    <h2>Institución Educativa<br>Colegio Luis Carlos Galán Sarmiento</h2>
+    <p>Comprometidos con la formación integral de niños,niñas y jóvenes del municipio de Orocué, Casanare. Más de tres décadas de trayectoria formando personas.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem">
+      <button class="btn btn-gold" onclick="showTab('historia',document.querySelectorAll('.tab-btn')[1])">Conoce nuestra historia</button>
+      <button class="btn btn-green" onclick="openModal()">📄 Solicitar documentos</button>
+    </div>
+  </div>
+  <div class="cbody">
+    <div class="grid g4" style="margin-bottom:2rem">
+      <div class="card" style="text-align:center;border-left:none;border-top:4px solid var(--gold)">
+        <div style="font-size:2rem;margin-bottom:.4rem">🎓</div>
+        <div style="font-size:1.8rem;font-weight:800;color:var(--navy)">1.200+</div>
+        <div style="font-size:.78rem;color:var(--gray)">Estudiantes matriculados</div>
+      </div>
+      <div class="card" style="text-align:center;border-left:none;border-top:4px solid var(--green)">
+        <div style="font-size:2rem;margin-bottom:.4rem">🧑‍🏫</div>
+        <div style="font-size:1.8rem;font-weight:800;color:var(--navy)">38</div>
+        <div style="font-size:.78rem;color:var(--gray)">Docentes de aula</div>
+      </div>
+      <div class="card" style="text-align:center;border-left:none;border-top:4px solid var(--navy)">
+        <div style="font-size:2rem;margin-bottom:.4rem">📅</div>
+        <div style="font-size:1.8rem;font-weight:800;color:var(--navy)">30</div>
+        <div style="font-size:.78rem;color:var(--gray)">Años de historia</div>
+      </div>
+      <div class="card" style="text-align:center;border-left:none;border-top:4px solid var(--gold)">
+        <div style="font-size:2rem;margin-bottom:.4rem">🏆</div>
+        <div style="font-size:1.8rem;font-weight:800;color:var(--navy)">A+</div>
+        <div style="font-size:.78rem;color:var(--gray)">Clasificación Pruebas Saber</div>
+      </div>
+    </div>
+    <p class="section-title">Accesos rápidos</p>
+    <div class="grid g3">
+      <div class="card" style="cursor:pointer" onclick="openModal()"><div class="card-icon">📄</div><h3>Solicitar documentos</h3><p>Certificados, boletines, paz y salvo de forma rápida y en línea.</p></div>
+      <div class="card" style="cursor:pointer" onclick="showTab('pqrs',document.querySelectorAll('.tab-btn')[7])"><div class="card-icon">📢</div><h3>Radicar PQRS</h3><p>Peticiones, quejas, reclamos y sugerencias para mejorar nuestro servicio.</p></div>
+      <div class="card" style="cursor:pointer" onclick="showTab('boletin',document.querySelectorAll('.tab-btn')[9])"><div class="card-icon">📊</div><h3>Consultar boletín</h3><p>Revisa el informe académico de tu hijo o hija por período.</p></div>
+      <div class="card" style="cursor:pointer" onclick="showTab('noticias',document.querySelectorAll('.tab-btn')[6])"><div class="card-icon">📰</div><h3>Noticias y eventos</h3><p>Mantente al día con todo lo que sucede en nuestra institución.</p></div>
+      <div class="card" style="cursor:pointer" onclick="showTab('manual',document.querySelectorAll('.tab-btn')[8])"><div class="card-icon">📘</div><h3>Manual de convivencia</h3><p>Descarga el manual actualizado con los derechos y deberes de la comunidad.</p></div>
+      <div class="card" style="cursor:pointer" onclick="showTab('contacto',document.querySelectorAll('.tab-btn')[10])"><div class="card-icon">📞</div><h3>Contáctanos</h3><p>Dirección, teléfonos, PBX y correos institucionales.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div id="panel-historia" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Nuestros orígenes</p>
+    <h2>Nuestra Historia</h2>
+    <p>
+
+La historia de la Institución Educativa se remonta al año <strong>1994</strong>, cuando un grupo de madres comunitarias y de familia se organizó con el firme propósito de gestionar la creación de un nuevo establecimiento educativo en el casco urbano de Orocué. <br> Esta iniciativa ciudadana surgió como una respuesta de inclusión social y equidad, orientada a garantizar el derecho constitucional a la educación de aquellos niños y jóvenes que presentaban barreras de acceso en la única institución existente en la época, ya fuera por situaciones de extraedad, diversidad en los ritmos de aprendizaje o perfiles convivenciales particulares. <br> De este modo, la institución nació bajo un profundo sentido de apertura, resiliencia y servicio a la comunidad.
+
+Los antecedentes de infraestructura de la institución se formalizaron en el año <strong>1986</strong>, cuando el Concejo Municipal de Orocué asignó un lote de terreno ubicado en la antigua pista conocida como <strong>"La vorágine"</strong> con el propósito de construir la planta física del plantel. Este espacio físico y proyecto educativo fue designado inicialmente bajo el nombre de <strong>Instituto Técnico Agrícola Ramón Nonato Pérez</strong>, sentando las bases de la planta física actual y proyectando la identidad formativa de la institución.
+
+<br> A partir del año <strong>2018</strong>, las promociones de bachilleres de la Institución Educativa Luis Carlos Galán Sarmiento acceden a los beneficios de la doble titulación, cuya oferta técnica varía según la disponibilidad de cada año lectivo. Así mismo, el Establecimiento Educativo (EE) recibe el respaldo de la estrategia intersectorial Colegios Amigos del Turismo (CAT), alianza que fortalece de manera directa la implementación del Proyecto Ambiental Escolar (PRAE) como eje pedagógico transversal.
+
+<br> La consolidación de la planta física de la Institución inició bajo la administración municipal del señor <strong>Oscar Celio González</strong>, periodo en el cual se edificaron las dos primeras aulas de clase. Posteriormente, durante la gestión del señor <strong>Omar loza Rodriguez</strong>, la infraestructura se expandió significativamente con la construcción de ocho salones adicionales. Paralelo al crecimiento físico, se promovió la primera convocatoria para el cuerpo docente de aula; una labor liderada e impulsada con determinación por las señoras <strong>María Ortiz y Ramona Tovar</strong>. <br> Este proceso de selección y articulación pedagógica contó con el valioso respaldo de educadores provenientes de la Institución Educativa La Inmaculada y de la Escuela Comunitaria Tierra Blanca, quienes aportaron su experiencia para dar inicio formal a las actividades académicas.
+
+El 30 de diciembre de <strong>1995</strong>, el Concejo Municipal de Orocué expidió el acuerdo Nº 038, mediante el cual se crea formalmente el <strong>“Colegio Municipal Luis Carlos Galán Sarmiento”</strong>. De conformidad con lo establecido en dicho acto administrativo, la institución fue constituida como un establecimiento público del orden municipal, quedando adscrita para su funcionamiento y lineamientos misionales a la entonces Secretaría de Salud, Educación, Cultura, Recreación y Deporte. Este hito normativo consolidó la vida jurídica del plantel y aseguró la asignación de recursos y soporte institucional para la comunidad educativa.
+
+<strong> <br> Las actividades académicas de la IE iniciaron formalmente en el año 1996 </strong>, contando con un equipo fundacional de tres docentes:<br> <strong> la profesora María Belkys Daza Guarín </strong>, quien asumió las funciones de dirección, junto a los docentes <strong> Javier Muñoz Tamayo y Jorge Alberto Nieto Escarpeta</strong>. En su primer año de servicio, el plantel abrió sus puertas a una matrícula inicial de 40 estudiantes, distribuidos en tres niveles educativos: el grado quinto (5°) de Básica Primaria, y los grados sextos (6°) y séptimo (7°) de Básica Secundaria (bachillerato). Este hito marcó el inicio del impacto pedagógico y social de la institución en el municipio.
+
+<br> En el año <strong>1997</strong>, correspondiente al último periodo de gobierno del alcalde <strong> Omar Loza Rodríguez </strong>, se encargó la Rectoría de la institución al   <strong> César Bernardo Llanos Moreno </strong>, quien además de liderar el plantel asumió la asignación académica de las asignaturas de <strong> Ciencias Naturales y Matemáticas </strong>; esto bajo una condición particular, dado que para la fecha la plaza de dirección no se encontraba formalmente creada ni reconocida en la planta de personal. En este mismo año lectivo, ante el incremento del servicio, el equipo de educadores se consolidó con la participación de los docentes: <br> <strong> María Belkys Daza Guarín, Santander Llerena Pérez, Doris Clemencia Salazar Rodríguez, María Bety Jaimes Parada, Dora Marleny Monroy, Javier Muñoz Tamayo y Jorge Cadena Galvis.</strong>
+
+El fortalecimiento legal de la institución se consolidó de manera significativa en el año <strong>1998</strong>, al obtener la aprobación oficial por parte de la Secretaría de Educación Departamental para operar y expedir certificaciones en el nivel de Básica Secundaria, mediante la Resolución Nº 1853 del 20 de noviembre de 1998.<br> Respaldados por este marco normativo, en el año 2001 se alcanzó uno de los mayores hitos institucionales con la graduación de la primera promoción de bachilleres, conformada por un total de 28 estudiantes. Este acontecimiento fue refrendado por la Resolución Nº 0672 del 22 de octubre de 2001, acto administrativo emitido por la Secretaría de Educación que facultó formalmente a la institución para otorgar el título de Bachiller Académico.
+
+La consolidación de la IE como la entidad educativa con mayor cobertura y envergadura del municipio se logró mediante un proceso estratégico de fusión. Inicialmente, la Secretaría de Educación Departamental expidió la Resolución Nº 0758 del 24 de septiembre de 2002, ordenando la integración de la Institución Educativa Luis Carlos Galán Sarmiento con la Escuela Comunitaria Tierra Blanca. Posteriormente, este alcance se expandió significativamente a través de la Resolución Nº 0332 del 19 de marzo de 2003, mediante la cual se adscribieron formalmente siete (7) escuelas unitarias de la zona rural pertenecientes a las veredas de: <br> <strong> La Esmeralda, Campoalegre, La Palmita, La Nueva Reforma, La Pradera, San Ignacio de Cumaco y Guariamena Corea </strong>. <br> A partir de este hito normativo, el establecimiento se constituyó en la Institución Educativa con la mayor cobertura del municipio, manteniendo las sedes rurales bajo la modalidad de escuelas unitarias para responder a las dinámicas del entorno disperso.
+
+En estricto cumplimiento de las directrices nacionales establecidas en el Decreto 3011 de 1997, la Institución Educativa implementó desde el año <strong>2008</strong>, la oferta educativa formal para adultos en la Sede Luis Carlos Galán Sarmiento. Este servicio se desarrolla bajo la modalidad semipresencial y se imparte de manera exclusiva en la jornada sabatina diurna, garantizando la inclusión, la continuidad y la permanencia en el sistema educativo de la población que requiere alternativas pedagógicas flexibles por razones laborales o socioeconómicas.
+
+La estructura física y operativa de la institución ha experimentado diversas modificaciones normativas ordenadas por la Secretaría de Educación Departamental. En primer lugar, mediante la Resolución Nº 2434 de <strong>2011</strong>, se dispuso el cierre de la Sede Urbana Tierra Blanca, la cual atendía los niveles de Preescolar, Primero y Segundo de primaria; este mismo acto administrativo ordenó la reconfiguración de la Sede Principal bajo la modalidad de doble jornada, distribuyendo desde entonces la Educación Inicial (Primera Infancia) y Básica Primaria en la jornada de la mañana, y la Básica Secundaria y Media (Bachillerato) en la jornada de la tarde. Cabe precisar que la reapertura de la planta urbana de Tierra Blanca no ha sido viable debido a la carencia de una infraestructura física idónea para su funcionamiento.
+
+En cuanto al sector rural, se han ejecutado cierres definitivos e inactividades temporales motivados por las dinámicas de la matrícula dispersa. Mediante la Resolución Nº 2232 del <strong> 13 de agosto de 2010 </strong>, se ordenó el cierre temporal de la Sede Rural La Palmita, seguido por la inactivación temporal de la Sede Rural La Pradera a través de la Resolución Nº 0801 del 31 de marzo de 2014. Posteriormente, la Sede Rural La Esmeralda fue clausurada mediante la Resolución Nº 0159 de 2018, y finalmente, la Sede Rural La Nueva Reforma cesó actividades provisionalmente en virtud de la Resolución Nº 0137 del 24 de enero de 2022.
+
+Un hito fundamental en la diversificación curricular de la Educación Media (grados 10° y 11°) se alcanzó en el año 2017, cuando la Institución Educativa formalizó su alianza estratégica con el Servicio Nacional de Aprendizaje (SENA). <br> Este proceso inició con la implementación del programa Técnico en Cultivo y Cosecha de Palma de Aceite.
+
+A partir del año <strong>2018</strong>, las promociones de bachilleres de la Institución Educativa Luis Carlos Galán Sarmiento acceden a los beneficios de la doble titulación, cuya oferta técnica varía según la disponibilidad de cada año lectivo. Así mismo, el Establecimiento Educativo (EE) recibe el respaldo de la estrategia intersectorial Colegios Amigos del Turismo (CAT), alianza que fortalece de manera directa la implementación del Proyecto Ambiental Escolar (PRAE) como eje pedagógico transversal.
+
+Posteriormente, en el año <strong>2019</strong>, se incorporó el programa Técnico en <strong> Contabilización de Operaciones Comerciales y Financieras </strong>, cuya cohorte finalizó con éxito en el 2020. En ese mismo año lectivo (2020), la oferta se diversificó con la apertura de las técnicas en <strong> Asistencia Administrativa y Operaciones Turísticas Locales </strong>, programas que mantuvieron continuidad en formación y titulación durante las vigencias 2021 y 2022.
+
+Para el año <strong>2023</strong>, la institución amplió su espectro formativo capacitando a los estudiantes en cuatro enfoques: <br> <strong>Técnico en Asistencia Administrativa, Técnico en Recursos Naturales, Técnico en Cultivo y Cosecha de Palma de Aceite y Técnico en Operaciones Turísticas Locales </strong>. <br> Finalmente, con el fin de responder a las demandas productivas y ambientales del entorno regional, durante los años 2024 y 2025 la oferta institucional se focalizó estratégicamente en los programas de Técnico en Recursos Naturales y Técnico en Cultivo y Cosecha de Palma de Aceite.
+
+A partir del año <strong>2018</strong>, las promociones de bachilleres de la Institución Educativa Luis Carlos Galán Sarmiento acceden a los beneficios de la doble titulación, cuya oferta técnica varía según la disponibilidad de cada año lectivo. Así mismo, el Establecimiento Educativo (EE) recibe el respaldo de la estrategia intersectorial Colegios Amigos del Turismo (CAT), alianza que fortalece de manera directa la implementación del Proyecto Ambiental Escolar (PRAE) como eje pedagógico transversal.
+
+<br> En cuanto a su cobertura geográfica, la institución coordina sus procesos pedagógicos a través de cinco sedes rurales activas: <br> <strong>Campoalegre, La Pradera, La Palmita, Guariamena Corea y San Ignacio de Cumaco </strong>.<br> Por su parte, el servicio en la zona urbana se concentra en la sede principal. <br> Cabe resaltar la problemática de la sede urbana Tierra Blanca; a la fecha, se han desvanecido las gestiones previas para su reapertura y no existen viabilidades técnicas ni presupuestales para su construcción. <br> Esta situación representa una sentida necesidad educativa para la comunidad, ya que su ausencia impide el establecimiento de una jornada única que permita resignificar el tiempo escolar en el marco de la Formación Integral.
+
+Para la vigencia 2025, la planta de personal de la institución se encuentra conformada por tres directivos docentes (Rector, Coordinadora Académica y Coordinadora de Convivencia) y 38 docentes de aula distribuidos estratégicamente. <br> En la Sede Principal, la educación inicial se fortaleció con la apertura e implementación del grado Jardín (atendido por dos docentes) y el grado Transición (con dos docentes); la Básica Primaria cuenta con 10 docentes; y la Básica Secundaria y Media es liderada por un equipo de 19 educadores. Con el fin de garantizar la equidad y permanencia educativa, la institución implementa modelos de aprendizaje flexibles: en la zona rural, cinco docentes atienden las sedes bajo la modalidad multigrado; en la zona urbana, un docente lidera la estrategia Aceleración del Aprendizaje, y se ofrece la jornada sabatina de educación formal para adultos.
+
+Finalmente, el equipo se complementa con una docente tutora del Programa de Tutorías para el Aprendizaje y la Formación Integral (PTA FI 3.0) y una secretaria en provisionalidad nombrada por la Secretaría de Educación Departamental. <br> El soporte operativo cuenta con el apoyo de la Gobernación de Casanare, entidad que contrata de forma temporal a dos auxiliares administrativas y dos empleados de servicios generales, mientras que la Administración Municipal vincula temporalmente a una promotora de lectura para apoyar los procesos de la biblioteca escolar.</p>
+  </div>
+  <div class="cbody">
+  <p class="section-title">Línea del tiempo</p>
+  <div class="timeline">
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1986</div>
+    <div class="tl-txt">
+      El Concejo Municipal de Orocué asignó un lote en la antigua pista
+      “La Vorágine” para la planta física del plantel, proyectado inicialmente
+      bajo el nombre de Instituto Técnico Agrícola Ramón Nonato Pérez.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1994</div>
+    <div class="tl-txt">
+      Un grupo de madres comunitarias y de familia gestionó la creación de
+      una institución inclusiva para atender barreras de acceso. Bajo la
+      administración de Oscar Celio González se construyeron las dos primeras aulas.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1995</div>
+    <div class="tl-txt">
+      El 30 de diciembre, mediante el Acuerdo Nº 038 del Concejo Municipal,
+      se creó formalmente el “Colegio Municipal Luis Carlos Galán Sarmiento”
+      como establecimiento público adscrito a la gestión municipal.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1996</div>
+    <div class="tl-txt">
+      Inicio formal de clases con 40 estudiantes (grados 5°, 6° y 7°) y
+      3 docentes: María Belkys Daza Guarín (directora), Javier Muñoz Tamayo
+      y Jorge Nieto Escarpeta. Bajo el mandato de Omar Loza se construyeron
+      8 salones más.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1997</div>
+    <div class="tl-txt">
+      Se encargó la rectoría al licenciado César Bernardo Llanos Moreno
+      y la planta docente se consolidó a 7 educadores para atender el
+      crecimiento de la matrícula.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">1998</div>
+    <div class="tl-txt">
+      El 20 de noviembre, mediante la Resolución Nº 1853 de la Secretaría
+      de Educación Departamental, se obtuvo la aprobación oficial para
+      operar el nivel de Básica Secundaria.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2001</div>
+    <div class="tl-txt">
+      El 22 de octubre, por Resolución Nº 0672, la Secretaría de Educación
+      autorizó la expedición del título de Bachiller Académico, graduando
+      la primera promoción conformada por 28 estudiantes.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2002</div>
+    <div class="tl-txt">
+      El 24 de septiembre, mediante la Resolución Nº 0758, se ordenó la
+      integración estratégica con la Escuela Comunitaria Tierra Blanca.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2003</div>
+    <div class="tl-txt">
+      Por Resolución Nº 0332 del 19 de marzo, se fusionaron 7 escuelas
+      rurales unitarias, convirtiendo a la IE en el plantel con la mayor
+      cobertura geográfica del municipio.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2008</div>
+    <div class="tl-txt">
+      Implementación del programa de Educación Formal para Adultos en la
+      jornada sabatina diurna, en cumplimiento del Decreto 3011 de 1997.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2011</div>
+    <div class="tl-txt">
+      La Resolución Nº 2434 dispuso el cierre de la Sede Urbana Tierra
+      Blanca y reorganizó la Sede Principal en doble jornada.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2017</div>
+    <div class="tl-txt">
+      Alianza estratégica con el SENA para la Media Técnica, iniciando
+      con el programa Técnico en Cultivo y Cosecha de Palma de Aceite.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2018</div>
+    <div class="tl-txt">
+      Se implementó la Doble Titulación con el SENA y la articulación
+      con la estrategia Colegios Amigos del Turismo (CAT). Cierre definitivo
+      de la Sede Rural La Esmeralda (Resolución Nº 0159).
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2022</div>
+    <div class="tl-txt">
+      Inactivación provisional de la Sede Rural La Nueva Reforma mediante
+      la Resolución Nº 0137 del 24 de enero.
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot"></div>
+    <div class="tl-yr">2025</div>
+    <div class="tl-txt">
+      La IE cuenta con 5 sedes rurales activas, sede principal urbana con
+      inclusión del grado Jardín, modelos de aprendizaje flexibles
+      (Aceleración y Multigrado) y un equipo de 3 directivos docentes
+      y 38 docentes de aula.
+    </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+<!-- MISIÓN -->
+<div id="panel-mision" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Nuestro propósito</p>
+    <h2>Misión Institucional</h2>
+  </div>
+  <div class="cbody">
+    <div class="card" style="max-width:700px;margin-bottom:2rem;padding:1.8rem;border-left-width:6px">
+      <p style="font-size:1rem;line-height:1.85;color:#1a1a2e"> 
+      <strong>La Institución Educativa Luis Carlos Galán Sarmiento</strong> es un establecimiento oficial comprometido con la formación integral de sus estudiantes, desde una perspectiva ética, inclusiva y humanista, que reconoce la educación como un proceso de construcción de sentido, pensamiento y autonomía. A través de la Pedagogía Conceptual, la institución orienta el desarrollo armónico del ser, el saber y el hacer, fortaleciendo las competencias cognitivas, socioemocionales, comunicativas y ciudadanas, en diálogo permanente con el contexto llanero del municipio de Orocué, su riqueza ambiental, cultural e histórica.
+      Su misión es formar ciudadanos críticos, participativos y solidarios, capaces de comprender su realidad, transformar su entorno de manera responsable y ejercer una ciudadanía democrática basada en el respeto por la diferencia, la convivencia pacífica y el cuidado de la vida en todas sus expresiones.
+      </p>
+    </div>
+    <p class="section-title">Nuestros pilares</p>
+    <div class="grid g3">
+      <div class="card"><div class="card-icon">📚</div><h3>Calidad académica</h3><p>Promovemos el pensamiento crítico, la investigación y el aprendizaje significativo en todas las áreas del conocimiento.</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3>Formación en valores</h3><p>Cultivamos el respeto, la honestidad, la solidaridad y la responsabilidad como fundamentos del ser.</p></div>
+      <div class="card"><div class="card-icon">🌱</div><h3>Desarrollo integral</h3><p>Acompañamos a cada estudiante en su crecimiento personal, social, cultural y espiritual.</p></div>
+      <div class="card"><div class="card-icon">🌎</div><h3>Conciencia ambiental</h3><p>Educamos para el cuidado del medio ambiente y el desarrollo sostenible de nuestra región llanera.</p></div>
+      <div class="card"><div class="card-icon">♿</div><h3>Inclusión</h3><p>Garantizamos acceso y permanencia a todos los estudiantes sin discriminación alguna.</p></div>
+      <div class="card"><div class="card-icon">💡</div><h3>Innovación pedagógica</h3><p>Incorporamos metodologías activas y tecnologías que enriquecen la experiencia de aprendizaje.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- VISIÓN -->
+<div id="panel-vision" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Hacia dónde vamos</p>
+    <h2>Visión Institucional</h2>
+  </div>
+  <div class="cbody">
+    <div class="card" style="max-width:700px;margin-bottom:2rem;padding:1.8rem;border-left-width:6px">
+      <p style="font-size:1rem;line-height:1.85;color:#1a1a2e">Para el año <strong>2035, la Institución Educativa Luis Carlos Galán Sarmiento </strong> será reconocida como un referente educativo en el municipio de Orocué por su apuesta pedagógica centrada en el desarrollo del pensamiento, la formación ética y la construcción de proyectos de vida autónomos y comprometidos con el bien común.
+        La institución proyectará egresados capaces de interpretar de manera reflexiva su contexto local y global, valorar la diversidad cultural, histórica y ambiental del territorio llanero, y participar activamente en la solución pacífica de los conflictos sociales y ambientales.
+        En articulación con iniciativas nacionales como el proyecto Amigos del Turismo, la institución fortalecerá una cultura turística responsable, orientada al reconocimiento, la preservación y la promoción sostenible del patrimonio natural y cultural de Orocué, concibiendo el turismo como una oportunidad pedagógica, económica y social para el desarrollo del territorio.
+        Desde la Pedagogía Conceptual, la institución consolidará prácticas educativas innovadoras que integren el conocimiento, la acción y la reflexión ética, formando ciudadanos que lideren procesos de transformación social con identidad, sentido de pertenencia y compromiso con su entorno.</p>
+    </div>
+    <p class="section-title">Metas 2030</p>
+    <div class="grid g2">
+      <div class="card"><div class="card-icon">🏅</div><h3>Liderazgo regional</h3><p>Posicionarnos entre las tres mejores instituciones de Casanare en Pruebas Saber 11 y competencias del siglo XXI.</p></div>
+      <div class="card"><div class="card-icon">💻</div><h3>Transformación digital</h3><p>Implementar aulas inteligentes y plataformas de aprendizaje digital en todas las sedes.</p></div>
+      <div class="card"><div class="card-icon">🎓</div><h3>Egresados exitosos</h3><p>Garantizar que el 95% de nuestros bachilleres accedan a educación superior o mundo laboral calificado.</p></div>
+      <div class="card"><div class="card-icon">🤝</div><h3>Articulación comunitaria</h3><p>Fortalecer alianzas con universidades, empresas y entidades que enriquezcan nuestra oferta educativa.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CUERPO ADMINISTRATIVO -->
+<div id="panel-admin" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Quiénes nos lideran</p>
+    <h2>Cuerpo Administrativo y Docente</h2>
+    <p>Profesionales comprometidos con la excelencia educativa y el bienestar de nuestra comunidad.</p>
+  </div>
+  <div class="cbody">
+    <p class="section-title">Directivos</p>
+    <div class="grid g2" style="margin-bottom:2rem">
+      <div class="admin-card">
+        <div class="av">🧑‍💼</div>
+        <h4>Lic. Cesar Bernardo Llano Moreno</h4>
+        <div class="role">Rector</div>
+        <p>Licenciado en Ciencias Sociales de la Universidad de los Llanos y Magíster en Educación de la Universidad Nacional. Con más de 22 años de experiencia en gestión educativa, llegó a la IE Colegio Luis Carlos Galán Sarmiento en 2015 como rector titular. Durante su gestión ha impulsado el programa de Media Técnica con el SENA, la modernización de las aulas y el aumento sostenido en los resultados de las Pruebas Saber. Es reconocido por su liderazgo participativo y su compromiso con la inclusión educativa en el municipio de Orocué.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av">🧑‍💼</div>
+        <h4>Lic. Esperanza Salamanca</h4>
+        <div class="role">Coordinadora Académica</div>
+        <p>Licenciada en Matemáticas y Física de la Universidad Pedagógica Nacional, con Especialización en Evaluación Educativa de la Universidad Santo Tomás. Con 18 años en la institución, lidera los procesos de planeación curricular, evaluación institucional y seguimiento académico. Ha sido artífice del modelo pedagógico constructivista adoptado por la institución y coordinó la transición al aprendizaje en línea durante la pandemia, garantizando la continuidad educativa de más de 1.000 estudiantes.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av">🧑‍💼</div>
+        <h4>Lic. Jorge Luis Pineda Cifuentes</h4>
+        <div class="role">Coordinador de Convivencia</div>
+        <p>Psicólogo de la Universidad El Bosque, con Licenciatura en Básica Primaria. Especialista en mediación escolar y resolución pacífica de conflictos. Lleva 12 años en la institución trabajando por la construcción de un ambiente escolar sano, seguro e inclusivo. Lidera el Comité de Convivencia Escolar, el programa de Prevención del Matoneo y el proyecto de Habilidades para la Vida, reconocido a nivel municipal por su impacto en el bienestar estudiantil.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av">🧑‍💼</div>
+        <h4>Ps. Sandra Milena Cárdenas López</h4>
+        <div class="role">Psicoorientadora</div>
+        <p>Psicóloga de la Universidad de los Llanos, especializada en Orientación Escolar y Desarrollo Humano. Con 9 años en la institución, brinda apoyo integral al proyecto de vida de los estudiantes, acompaña procesos de orientación vocacional y atiende situaciones de riesgo psicosocial. Coordina el programa de Escuela de Padres y el Comité de Bienestar Estudiantil, siendo un puente fundamental entre las familias, los docentes y los estudiantes.</p>
+      </div>
+    </div>
+
+    <p class="section-title">Planta Docente</p>
+    <div class="grid g3">
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Rosa Amanda Gutiérrez</h4>
+        <div class="role">Docente — Español y Literatura</div>
+        <p>Licenciada en Lengua Castellana, UPTC. 15 años en la institución. Coordinadora del club de lectura "Letras del Llano" y responsable del periódico escolar digital.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Mg. Héctor Fabián Soto</h4>
+        <div class="role">Docente — Matemáticas</div>
+        <p>Magíster en Didáctica de la Matemática. 11 años en la IE. Sus estudiantes han obtenido reconocimientos regionales en olimpiadas de matemáticas.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Gloria Inés Ramírez</h4>
+        <div class="role">Docente — Ciencias Naturales</div>
+        <p>Licenciada en Biología, Universidad de los Llanos. Lidera el proyecto ambiental "Guardianes del Agua", ganador de reconocimiento municipal 2023.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Esp. Luis Fernando Ríos</h4>
+        <div class="role">Docente — Ciencias Sociales</div>
+        <p>Especialista en Historia de Colombia, UNAL. 8 años en la institución. Autor del proyecto "Memorias Casanareñas" que promueve la cultura llanera entre los estudiantes.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Paola Andrea Méndez</h4>
+        <div class="role">Docente — Inglés</div>
+        <p>Licenciada en Idiomas, con nivel C1 certificado por Cambridge. 6 años en la IE. Implementó el programa bilingüe y el intercambio virtual con instituciones de México y Argentina.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Ing. César Augusto Leal</h4>
+        <div class="role">Docente — Tecnología e Informática</div>
+        <p>Ingeniero de Sistemas, especialista en Informática Educativa. 10 años en la institución. Lidera el programa de robótica escolar y la plataforma digital de aprendizaje.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Diana Carolina Ospina</h4>
+        <div class="role">Docente — Educación Física</div>
+        <p>Licenciada en Educación Física y Deportes, con Especialización en Actividad Física y Salud. Entrenadora de los equipos de fútbol y baloncesto que representan a la institución en los Juegos Intercolegiados.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Andrés Felipe Cuervo</h4>
+        <div class="role">Docente — Ética y Religión</div>
+        <p>Filósofo y teólogo, Universidad Javeriana. 7 años en la institución. Promueve el pensamiento crítico, la ciudadanía activa y los valores democráticos en toda la comunidad educativa.</p>
+      </div>
+      <div class="admin-card">
+        <div class="av" style="font-size:1.3rem">🧑‍🏫</div>
+        <h4>Lic. Martha Cecilia Bohórquez</h4>
+        <div class="role">Docente — Preescolar y Primaria</div>
+        <p>Licenciada en Pedagogía Infantil. 14 años acompañando los primeros pasos académicos de los niños de la institución con metodologías lúdicas y afectivas.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem">
+      <p class="section-title">Área Administrativa</p>
+      <div class="grid g3">
+        <div class="admin-card">
+          <div class="av" style="font-size:1.3rem">🧑‍💻</div>
+          <h4>Ana Lucía Bermúdez Castro</h4>
+          <div class="role">Secretaria Académica</div>
+          <p>Administradora de Empresas con 16 años en la institución. Encargada de matrículas, expedición de certificados, gestión documental y atención a familias. Garantiza la eficiencia de todos los trámites administrativos.</p>
+        </div>
+        <div class="admin-card">
+          <div class="av" style="font-size:1.3rem">🧑‍💻</div>
+          <h4>Roberto Carlos Niño Medina</h4>
+          <div class="role">Auxiliar Administrativo</div>
+          <p>Técnico en Gestión Documental. Apoya los procesos de archivo, correspondencia y gestión de recursos físicos de la institución desde hace 8 años.</p>
+        </div>
+        <div class="admin-card">
+          <div class="av" style="font-size:1.3rem">📚</div>
+          <h4>Blanca Nelly Fonseca</h4>
+          <div class="role">Biblioteca y Recursos</div>
+          <p>Bibliotecóloga de la Universidad La Salle. Administra el fondo bibliográfico de 4.500 títulos, promueve la lectura y coordina el acceso a recursos digitales educativos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALERÍA -->
+<div id="panel-galeria" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Momentos que nos definen</p>
+    <h2>Galería de Imágenes</h2>
+    <p>Fotografías que capturan la vida, los logros y el espíritu de nuestra comunidad educativa.</p>
+  </div>
+  <div class="cbody">
+    <p class="section-title">Eventos y actividades 2024</p>
+    <div class="gal-grid">
+      <div class="gal-item">🏫<div class="gal-label">Sede principal — Cabecera Municipio Orocué</div></div>
+      <div class="gal-item">🎉<div class="gal-label">Día institucional 2024</div></div>
+      <div class="gal-item">🎓<div class="gal-label">Ceremonia de graduación 2023</div></div>
+      <div class="gal-item">🎭<div class="gal-label">Semana Galanista</div></div>
+      <div class="gal-item">⚽<div class="gal-label">Intercolegiados Casanare</div></div>
+      <div class="gal-item">🌿<div class="gal-label">Proyecto ambiental "Guardianes del Agua"</div></div>
+      <div class="gal-item">🎶<div class="gal-label">Festival Cultural Llanero</div></div>
+      <div class="gal-item">📖<div class="gal-label">Semana de la Lectura</div></div>
+    </div>
+    <p style="margin-top:1.2rem;font-size:.8rem;color:var(--gray);font-style:italic">📷 Las fotografías reales se agregarán cuando el sitio sea publicado en el servidor institucional.</p>
+  </div>
+</div>
+
+<!-- NOTICIAS Y EVENTOS -->
+<div id="panel-noticias" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Al día con la institución</p>
+    <h2>Noticias y Eventos</h2>
+    <p>Mantente informado sobre todo lo que acontece en nuestra comunidad educativa.</p>
+  </div>
+  <div class="cbody">
+    <div class="grid g2">
+      <div>
+        <p class="section-title">Últimas noticias</p>
+        <div class="nlist">
+          <div class="news-item"><div class="nd"><div class="day">18</div><div class="mon">Jun</div></div><div class="nc"><h4>Mejores resultados en Pruebas Saber 11</h4><p>Nuestros estudiantes de grado 11 obtuvieron los mejores puntajes de los últimos cinco años, con dos estudiantes entre los mejores del departamento.</p><span class="ntag">Académico</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">10</div><div class="mon">Jun</div></div><div class="nc"><h4>Apertura de matrículas 2025</h4><p>Se abre el período de matrícula para el año lectivo 2025. Consulta los requisitos en secretaría o en el menú "Solicitud de documentos".</p><span class="ntag verde">Administrativo</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">02</div><div class="mon">Jun</div></div><div class="nc"><h4>Proyecto ambiental gana reconocimiento</h4><p>"Guardianes del Agua" representará a Aguazul en la feria departamental de medio ambiente de Casanare.</p><span class="ntag" style="background:var(--navy)">Ambiental</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">25</div><div class="mon">May</div></div><div class="nc"><h4>Equipo de robótica llega a semifinales</h4><p>El equipo "GalanBots" clasificó entre los ocho mejores equipos del torneo regional de robótica escolar.</p><span class="ntag">Tecnología</span></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="section-title">Próximos eventos</p>
+        <div class="nlist">
+          <div class="news-item"><div class="nd"><div class="day">25</div><div class="mon">Jun</div></div><div class="nc"><h4>Festival del Talento Estudiantil</h4><p>Muestra cultural y artística de todos los grados. Entrada libre para toda la comunidad. Lugar: patio central, 8 am.</p><span class="ntag verde">Cultural</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">05</div><div class="mon">Jul</div></div><div class="nc"><h4>Entrega de boletines — Período 2</h4><p>Jornada de entrega de informes académicos del segundo período. Presencia obligatoria de padres y acudientes.</p><span class="ntag">Académico</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">20</div><div class="mon">Jul</div></div><div class="nc"><h4>Izada de bandera — Independencia</h4><p>Acto cívico en honor al 20 de julio. Participación de toda la comunidad educativa. Hora: 7:30 am.</p><span class="ntag" style="background:var(--red)">Cívico</span></div></div>
+          <div class="news-item"><div class="nd"><div class="day">10</div><div class="mon">Ago</div></div><div class="nc"><h4>Feria de Proyectos 2024</h4><p>Exhibición de proyectos de investigación de los grados 8° a 11°. Jurado externo e invitados especiales de la Alcaldía.</p><span class="ntag">Investigación</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PQRS -->
+<div id="panel-pqrs" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Tu voz importa</p>
+    <h2>PQRS</h2>
+    <p>Peticiones, quejas, reclamos y sugerencias. Escuchamos a nuestra comunidad para mejorar cada día.</p>
+  </div>
+  <div class="cbody">
+    <p class="section-title">Tipo de solicitud</p>
+    <div class="pqrs-types" id="pqrs-types">
+      <div class="ptype" onclick="selPQRS(this,'Petición')"><div class="pi">📝</div><h4>Petición</h4><p>Solicitudes de información o trámites</p></div>
+      <div class="ptype" onclick="selPQRS(this,'Queja')"><div class="pi">⚠️</div><h4>Queja</h4><p>Inconformidades con el servicio</p></div>
+      <div class="ptype" onclick="selPQRS(this,'Reclamo')"><div class="pi">❗</div><h4>Reclamo</h4><p>Corrección de situaciones que afectan derechos</p></div>
+      <div class="ptype" onclick="selPQRS(this,'Sugerencia')"><div class="pi">💡</div><h4>Sugerencia</h4><p>Propuestas de mejora</p></div>
+    </div>
+    <div class="form-wrap">
+      <div class="fr"><label>Nombre completo</label><input type="text" placeholder="Tu nombre y apellidos"/></div>
+      <div class="row2">
+        <div class="fr"><label>Correo electrónico</label><input type="email" placeholder="correo@ejemplo.com"/></div>
+        <div class="fr"><label>Teléfono</label><input type="tel" placeholder="Número de contacto"/></div>
+      </div>
+      <div class="fr">
+        <label>Relación con la institución</label>
+        <select><option value="">— Selecciona —</option><option>Estudiante</option><option>Padre/madre de familia</option><option>Docente</option><option>Egresado</option><option>Comunidad en general</option></select>
+      </div>
+      <div class="fr"><label>Tipo de solicitud</label><input type="text" id="pqrs-tipo" readonly placeholder="Selecciona arriba el tipo..." style="background:#f0f2f5"/></div>
+      <div class="fr"><label>Descripción detallada</label><textarea placeholder="Describe con detalle tu petición, queja, reclamo o sugerencia..."></textarea></div>
+      <button class="btn btn-navy" onclick="alert('✅ Su PQRS ha sido radicado exitosamente.\n\nNúmero de radicado: PQRS-2024-'+Math.floor(Math.random()*9000+1000)+'\n\nRecibirá respuesta en máximo 15 días hábiles al correo registrado.\n\nGracias por contribuir a mejorar nuestra institución.')">Enviar PQRS</button>
+    </div>
+  </div>
+</div>
+
+<!-- MANUAL DE CONVIVENCIA -->
+<div id="panel-manual" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Conozca nuestro manual</p>
+    <h2>Manual de Convivencia</h2>
+    <p>El marco de derechos, deberes y compromisos que regula nuestra vida en comunidad.</p>
+  </div>
+  <div class="cbody">
+    <div style="background:#f0faf4;border:1.5px solid var(--green);border-radius:var(--r);padding:1.2rem 1.5rem;margin-bottom:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem">
+      <div><p style="font-weight:700;color:var(--green);margin-bottom:.2rem">📘 Manual de Convivencia 2025</p><p style="font-size:.82rem;color:var(--gray)">Versión actualizada y aprobada por el Consejo Directivo —  2025</p></div>
+      <a class="btn-descarga-manual" id="btn-manual-pdf" href="/manual convivencia/Manual de Convivencia.docx" download="Manual_de_Convivencia_LUCAGASA.pdf" onclick="descargarManual(this)"> 
+      <span class="dl-icon">⬇</span>
+        <span class="dl-text">Descargar Manual de Convivencia</span>
+      </a>
+    </div>
+    <div class="msec">
+    <h3>📜 Cap. 1 — Marco legal y principios institucionales</h3>
+    <ul>
+        <li><strong>Fundamento normativo:</strong> Se rige por la Constitución Política de Colombia (Art. 67), Ley 115/1994, Ley 1098/2006 (Infancia y Adolescencia) y Ley 1620/2013[cite: 1].</li>
+        <li><strong>Principios rectores:</strong> La convivencia se basa en el respeto a la dignidad humana, la autonomía, la integralidad, la diversidad y la no discriminación por género, etnia, religión u orientación sexual[cite: 1].</li>
+        <li><strong>Corresponsabilidad:</strong> La educación y la convivencia pacífica son responsabilidad compartida entre el Estado, la sociedad, la institución y la familia (Art. 44 C.P.)[cite: 1].</li>
+        <li><strong>Resolución de conflictos:</strong> Promoción de la autorregulación y alternativas pacíficas que permitan aprender del error y reparar los daños causados[cite: 1].</li>
+    </ul>
+</div>
+
+<div class="msec">
+    <h3>✅ Cap. 2 — Derechos de los estudiantes</h3>
+    <ul>
+        <li>Recibir una educación integral fundada en la dignidad humana en ambientes pacíficos, democráticos e incluyentes[cite: 1].</li>
+        <li>Ejercer la libertad de conciencia, libre desarrollo de la personalidad y libertad de expresión dentro del respeto mutuo[cite: 1].</li>
+        <li>Participar activamente en el gobierno escolar y en las acciones de la Ruta de Atención Integral (RAI)[cite: 1].</li>
+        <li>Garantía del debido proceso en todas las actuaciones disciplinarias y de convivencia[cite: 1].</li>
+        <li>Recibir acompañamiento de orientación escolar y soporte ante vulneraciones de sus derechos humanos, sexuales y reproductivos[cite: 1].</li>
+    </ul>
+</div>
+
+<div class="msec">
+    <h3>📋 Cap. 3 — Deberes y presentación personal</h3>
+    <ul>
+        <li><strong>Cumplimiento de normas:</strong> Respetar el Manual de Convivencia, los horarios de entrada, salida, clases y mantener sanas costumbres[cite: 1].</li>
+        <li><strong>Respeto y convivencia:</strong> Guardar el debido respeto hacia docentes, directivos, personal administrativo, servicios generales y compañeros[cite: 1].</li>
+        <li><strong>Presentación personal y vestimenta:</strong> Asistir con los uniformes institucionales reglamentarios y mantener las normas de presentación aceptadas en la matrícula (Sentencias T-519/92 y T-341/93)[cite: 1].</li>
+        <li><strong>Compromiso académico:</strong> Participar activamente en su proceso formativo y cumplir con los deberes y evaluaciones[cite: 1].</li>
+        <li><strong>Cuidado del entorno:</strong> Abstenerse de portar, consumir o comercializar sustancias psicoactivas, cigarrillos o vapeadores, y cuidar los bienes de la institución[cite: 1].</li>
+    </ul>
+</div>
+
+<div class="msec">
+    <h3>⚖️ Cap. 4 — Clasificación de situaciones, faltas y debido proceso</h3>
+    <ul>
+        <li><strong>Situaciones Tipo I:</strong> Conflictos manejados inadecuadamente o hechos esporádicos que no generan daño al cuerpo o a la salud[cite: 1].</li>
+        <li><strong>Situaciones Tipo II:</strong> Agresión escolar, acoso escolar (<em>bullying</em>) o ciberacoso (<em>ciberbullying</em>) reiterado/sistemático o que cause daño a la salud sin incapacidad, que no constituya delito[cite: 1].</li>
+        <li><strong>Situaciones Tipo III:</strong> Agresiones constitutivas de presuntos delitos (delitos contra la libertad/integridad sexual u otros delitos según la ley penal colombiana)[cite: 1].</li>
+        <li><strong>Ruta de Atención Integral (RAI):</strong> Protocolos estructurados en cuatro componentes: Promoción, Prevención, Atención y Seguimiento[cite: 1].</li>
+        <li><strong>Garantía de debido proceso (Art. 29 C.P.):</strong> Derecho a la defensa, notificación de faltas y controversia de pruebas antes de aplicar medidas pedagógicas o correctivas[cite: 1].</li>
+        <li><strong>Jurisprudencia de permanencia:</strong> La Corte Constitucional aclara que la institución no está obligada a mantener en las aulas a quienes de forma reiterada incumplen el reglamento o faltan al rendimiento académico (Sentencias T-519/92 y T-316/94)[cite: 1].</li>
+    </ul>
+</div>
+
+<div class="msec">
+    <h3>👨‍👩‍👧 Cap. 5 — Compromisos de padres de familia y acudientes</h3>
+    <ul>
+        <li><strong>Aceptación obligatoria:</strong> La firma de la matrícula o su renovación implica la aceptación obligatoria del Manual de Convivencia (Ley 115/1994, Art. 87)[cite: 1].</li>
+        <li><strong>Acompañamiento formativo:</strong> Concurrir obligatoriamente a la formación moral, intelectual y física de los estudiantes desde el hogar[cite: 1].</li>
+        <li><strong>Respaldo a la institución:</strong> Acompañar las medidas correctivas. La Corte establece que no se debe encubrir las faltas de los hijos ni asumir actitudes agresivas contra los educadores (Sentencia T-366/1997)[cite: 1].</li>
+        <li><strong>Participación y citaciones:</strong> Asistir puntualmente a las reuniones, citaciones de docentes, talleres de Escuela para Padres y llamados del Comité de Convivencia Escolar[cite: 1].</li>
+    </ul>
+</div>
+  </div>
+</div>
+
+<!-- BOLETÍN ACADÉMICO -->
+<div id="panel-boletin" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Informe de desempeño</p>
+    <h2>Conozca su Boletín Académico</h2>
+    <p>Conozca como interpretar nuestro Boletín</p>
+  </div>
+  <div class="cbody">
+    <div class="form-wrap" style="margin-bottom:2rem">
+      <p style="font-size:.88rem;color:var(--gray);margin-bottom:1.2rem">Ingrese los datos del estudiante para consultar su boletín de notas.</p>
+      <div class="row2">
+        <div class="fr"><label>Documento del estudiante (T.I. / C.C.)</label><input type="text" placeholder="Número de documento"/></div>
+        <div class="fr"><label>Fecha de nacimiento</label><input type="date"/></div>
+      </div>
+      <div class="row2">
+        <div class="fr"><label>Grado</label><select><option value="">— Selecciona —</option><option>Preescolar</option><option>Grado 1°</option><option>Grado 2°</option><option>Grado 3°</option><option>Grado 4°</option><option>Grado 5°</option><option>Grado 6°</option><option>Grado 7°</option><option>Grado 8°</option><option>Grado 9°</option><option>Grado 10°</option><option>Grado 11°</option></select></div>
+        <div class="fr"><label>Período académico</label><select><option>Período 1 — 2024</option><option>Período 2 — 2024</option><option>Período 3 — 2024</option><option>Período 4 — 2024</option><option>Informe Final 2023</option></select></div>
+      </div>
+      <button class="btn btn-navy" onclick="alert('📊 En la versión en línea, aquí se mostrará el boletín académico del estudiante.\n\nPara activar esta función, comuníquese con secretaría académica.')">Consultar boletín</button>
+    </div>
+    <p class="section-title">Boletines disponibles</p>
+    <div class="grid g4">
+      <div class="bol-card"><div class="bol-top">📄</div><div class="bol-body"><h4>Boletín Período 1 — 2024</h4><p>Primer período lectivo 2024</p><div class="bol-dl">⬇ Descargar PDF</div></div></div>
+      <div class="bol-card"><div class="bol-top">📄</div><div class="bol-body"><h4>Boletín Período 2 — 2024</h4><p>Segundo período lectivo 2024</p><div class="bol-dl">⬇ Descargar PDF</div></div></div>
+      <div class="bol-card"><div class="bol-top">📄</div><div class="bol-body"><h4>Boletín Período 3 — 2024</h4><p>Tercer período lectivo 2024</p><div class="bol-dl">⬇ Descargar PDF</div></div></div>
+      <div class="bol-card"><div class="bol-top">📄</div><div class="bol-body"><h4>Informe Final 2023</h4><p>Boletín de promoción 2023</p><div class="bol-dl">⬇ Descargar PDF</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div id="panel-contacto" class="panel">
+  <div class="hero-band">
+    <p class="eyebrow">Estamos para servirte</p>
+    <h2>Contáctanos</h2>
+    <p>Toda la información de contacto de la Institución Educativa Colegio Luis Carlos Galán Sarmiento.</p>
+  </div>
+  <div class="cbody">
+    <div class="contact-grid">
+      <div class="cinfo"><div class="ci-icon">📍</div><h4>Dirección</h4><p>CALLE 5 NO 10D-27, Barrio La Manga<br>Orocué, Casanare, Colombia<br>Código postal:853050 </p></div>
+     <div class="cinfo"><div class="ci-icon">📞</div><h4>Teléfono,PBX y Sedes</h4><p>Principal ☎ (608) 636 5148 <br>Teléfono Conmutador: 3507696725 <br>Teléfono móvil: 3507696725-320 8424907 <br>Línea de atención gratuita: 3507696726 <br> Campo alegre 6365207 <br> La Esmeralda 6365207  <br> Guariamena 6365207 <br>  Cravo Sur 6365207 <br> La Pradera 6365207 <br> La Reforma 6365207 <br> Cumaco 6365207 <br>  </p><p>☎ PBX: (608) 636 5148 </p><p>📱 Celular:350 7696725 - 350 7696726</p></div>
+      <div class="cinfo"><div class="ci-icon">✉️</div><h4>Correo institucional</h4><a href="mailto:luiscarlosgalan@sedcasanare.gov.co">luiscarlosgalan@sedcasanare.gov.co</a> <h4>Correo Notificaciones Judiciales</h4><a href="mailto:secretaria@lucagasa.edu.co">secretaria@lucagasa.edu.co</a> <h4>Correo Privativo</h4> <a href="mailto:ieluiscarlosgalan@sedcasanare.gov.co">ieluiscarlosgalan@sedcasanare.gov.co</a></div>
+      <div class="cinfo"><div class="ci-icon">🕐</div><h4>Horarios de atención</h4><p>Lunes a viernes:<br>8:00 am — 12:00 m <br> 2:00 pm — 5:00 pm </p><p style="margin-top:.4rem"></p></div>
+      <div class="cinfo">
+  <div class="ci-icon">🌐</div>
+  <h4>Sitio web y redes</h4>
+  <a href="https://www.facebook.com/lucagasa/?locale=es_LA" target="_blank" rel="noopener noreferrer">
+    Facebook Institucional
+  </a>
+</div>
+      <div class="cinfo"><div class="ci-icon">🏛️</div><h4>Datos institucionales</h4><p>Código DANE:185230001090</p><p>NIT:844002343-2 </p><p>Resolución de aprobación:<br>No. 0234 de 2003</p><p>Secretaría de Educación de Casanare</p></div>
+    </div>
+    <div id="map" class="map-container"> <h4> Colegio Luis Carlos Galán Sarmiento</h4>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.790377741152!2d-71.34745212189816!3d4.788019475819566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e132d2a5ac72555%3A0x7ea69752a0deee15!2sI.E.%20Luis%20Carlos%20Gal%C3%A1n%20Sarmiento!5e0!3m2!1ses-419!2sco!4v1785375281099!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div style="margin-top:2rem">
+      <p class="section-title">Envíanos un mensaje</p>
+      <div class="form-wrap">
+        <div class="row2">
+          <div class="fr"><label>Nombre completo</label><input type="text" placeholder="Tu nombre"/></div>
+          <div class="fr"><label>Correo electrónico</label><input type="email" placeholder="tucorreo@email.com"/></div>
+        </div>
+        <div class="fr"><label>Asunto</label><input type="text" placeholder="¿En qué te podemos ayudar?"/></div>
+        <div class="fr"><label>Mensaje</label><textarea placeholder="Escribe tu mensaje aquí..."></textarea></div>
+        <button class="btn btn-navy" onclick="alert('✅ Mensaje enviado. Nos pondremos en contacto contigo pronto.')">Enviar mensaje</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div><h5>IE Colegio Luis Carlos Galán Sarmiento</h5><p>Orocué, Casanare, Colombia</p><p>www.lucagasa.edu.co</p></div>
+    <div><h5>Contacto</h5><p>Línea de atención gratuita: 3507696726</p><p>ieluiscarlosgalan@sedcasanare.gov.co</p><p>luiscarlosgalan@sedcasanare.gov.co</p></div>
+    <div><h5>Secretaría de Educación</h5><p>Gobernación de Casanare</p><a href="#">Ministerio de Educación Nacional</a><a href="#">ICFES — Pruebas Saber</a></div>
+  </div>
+  <div class="footer-bottom">© 2024 IE Colegio Luis Carlos Galán Sarmiento — Todos los derechos reservados &nbsp;|&nbsp; DANE: 185230001090</div>
+</footer>
+
+<!-- ═══════════════ MODAL SOLICITUD ═══════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeIfBack(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">📄 Solicitud de Documentos</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"><!-- content injected --></div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
