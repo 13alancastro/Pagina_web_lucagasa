@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0d2240;
-  --navy2:#1a3a5c;
+  --navy:#1a7c3e;
+  --navy2:#22a052;
   --green:#1a7c3e;
   --green2:#22a052;
   --gold:#d4a017;
@@ -121,14 +121,14 @@ nav{background:var(--white);border-bottom:3px solid var(--gold);position:sticky;
 .gal-item{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;cursor:pointer;transition:transform .2s,box-shadow .2s}
 .gal-item:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .gal-label{position:absolute;bottom:0;left:0;right:0;background:rgba(13,34,64,.82);color:#fff;font-size:.7rem;padding:.35rem .6rem;text-align:center}
-.gal-item:nth-child(1){background:linear-gradient(135deg,#0d2240,#1a7c3e)}
-.gal-item:nth-child(2){background:linear-gradient(135deg,#1a3a5c,#d4a017)}
-.gal-item:nth-child(3){background:linear-gradient(135deg,#1a7c3e,#0d2240)}
-.gal-item:nth-child(4){background:linear-gradient(135deg,#d4a017,#1a3a5c)}
-.gal-item:nth-child(5){background:linear-gradient(135deg,#22a052,#1a3a5c)}
-.gal-item:nth-child(6){background:linear-gradient(135deg,#0d2240,#d4a017)}
-.gal-item:nth-child(7){background:linear-gradient(135deg,#1a3a5c,#22a052)}
-.gal-item:nth-child(8){background:linear-gradient(135deg,#d4a017,#0d2240)}
+.gal-item:nth-child(1){background:linear-gradient(135deg,#1a7c3e,#1a7c3e)}
+.gal-item:nth-child(2){background:linear-gradient(135deg,#22a052,#d4a017)}
+.gal-item:nth-child(3){background:linear-gradient(135deg,#1a7c3e,#1a7c3e)}
+.gal-item:nth-child(4){background:linear-gradient(135deg,#d4a017,#22a052)}
+.gal-item:nth-child(5){background:linear-gradient(135deg,#22a052,#22a052)}
+.gal-item:nth-child(6){background:linear-gradient(135deg,#1a7c3e,#d4a017)}
+.gal-item:nth-child(7){background:linear-gradient(135deg,#22a052,#22a052)}
+.gal-item:nth-child(8){background:linear-gradient(135deg,#d4a017,#1a7c3e)}
 
 /* ── NEWS ── */
 .news-item{background:#fff;border-radius:var(--r);padding:1.2rem 1.4rem;box-shadow:0 2px 10px rgba(0,0,0,.07);display:flex;gap:1.1rem;align-items:flex-start;border-left:4px solid var(--gold)}
@@ -329,3 +329,169 @@ footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:.76rem;paddi
   .cinfo a:hover {
     text-decoration: underline;
   }
+
+/* ── PALETA VERDE LIMÓN Y BLANCO ── */
+body{background:linear-gradient(135deg,#f2f8dc 0%,#fff 48%,#f7fbe9 100%)}
+.cbody{background:linear-gradient(135deg,#f2f8dc 0%,#fff 48%,#f7fbe9 100%)}
+
+/* ── NOMBRE INSTITUCIONAL ── */
+header{position:relative;justify-content:center;min-height:170px;padding:1rem 1.5rem}
+.hdr-left{position:relative;flex:1;min-width:0;min-height:138px;justify-content:center}
+.logo-img{position:absolute;left:0;width:112px;height:112px}
+.hdr-title{width:100%;padding:0 13rem;text-align:center}
+.hdr-title h1{font-size:clamp(1.55rem,3.5vw,2.7rem);line-height:1.12}
+.btn-solicitud{position:absolute;right:1.5rem;top:1rem}
+.hero-home{text-align:center}
+.hero-home .eyebrow{max-width:none}
+.hero-home .institution-name{max-width:1000px;margin:0 auto .9rem;font-size:clamp(2rem,5vw,3.35rem);line-height:1.12}
+.hero-home>p:not(.eyebrow){margin:.5rem auto;max-width:780px}
+.hero-home>div{margin-left:auto;margin-right:auto}
+
+/* ── TARJETAS DE CATEGORÍA Y ÁLBUMES ── */
+.gallery-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem}
+.gallery-category{min-width:0;display:flex;align-items:center;gap:.85rem;padding:1rem 1.1rem;border:1.5px solid #dce9ad;border-radius:14px;background:linear-gradient(140deg,#fff 0%,#f8fbe9 100%);color:var(--navy);text-align:left;cursor:pointer;box-shadow:0 4px 14px rgba(85,115,20,.08);transition:transform .18s,border-color .18s,box-shadow .18s}
+.gallery-category:hover,.gallery-category.active{transform:translateY(-2px);border-color:#a4c940;box-shadow:0 8px 20px rgba(85,115,20,.14)}
+.gallery-category.active{background:linear-gradient(140deg,#f2f8dc 0%,#fff 100%);outline:2px solid rgba(164,201,64,.22)}
+.gallery-category-icon{font-size:1.8rem}
+.gallery-category-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:.2rem}
+.gallery-category-copy strong{font-size:.95rem}
+.gallery-category-copy small{color:var(--gray);font-size:.73rem}
+.gallery-count{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#e8f2c5;color:#486b00;font-size:.75rem;font-weight:800}
+.teacher-publish{max-width:900px;margin:0 auto 2rem;padding:1.5rem;background:#fff;border:1px solid #e2edc0;border-top:4px solid #acd335;border-radius:14px;box-shadow:0 8px 24px rgba(40,70,0,.07)}
+.teacher-publish-heading{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+.publish-icon{display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:12px;background:#eff7d4;font-size:1.5rem}
+.teacher-publish-heading h3,.gallery-results-heading h3{font-family:'Merriweather',serif;color:var(--navy);font-size:1.05rem;margin-bottom:.25rem}
+.teacher-publish-heading p{font-size:.8rem;color:var(--gray);line-height:1.5}
+.teacher-publish .fr{margin-bottom:.85rem}
+.teacher-publish input[type=file]{padding:.55rem;background:#fbfcf6}
+.gallery-file-hint{display:block;margin-top:.4rem;color:var(--gray);font-size:.72rem}
+.gallery-storage-note{margin-top:1rem;padding:.75rem .9rem;border-radius:8px;background:#f5f9e7;color:#61752c;font-size:.74rem;line-height:1.55}
+.gallery-results{margin-top:2rem}
+.gallery-results-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding-bottom:.65rem;border-bottom:2px solid #c6dd79}
+.gallery-results-heading span{font-size:.76rem;color:var(--gray)}
+.gallery-albums{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.gallery-album-card{min-width:0;overflow:hidden;border:1px solid #e6ebdb;border-radius:13px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.gallery-album-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.7rem;padding:1rem 1rem .8rem}
+.gallery-album-header h4{font-family:'Merriweather',serif;color:var(--navy);font-size:.92rem;overflow-wrap:anywhere}
+.gallery-album-header p{margin-top:.35rem;color:var(--gray);font-size:.72rem}
+.gallery-album-category{flex-shrink:0;padding:.25rem .5rem;border-radius:99px;background:#edf5d1;color:#4c7000;font-size:.65rem;font-weight:700}
+.gallery-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:.5rem;padding:0 .8rem .8rem}
+.gallery-media{min-width:0;overflow:hidden;border-radius:8px;background:#f5f7ef}
+.gallery-media img,.gallery-media video{display:block;width:100%;height:145px;object-fit:cover;background:#e9eddf}
+.gallery-media video{object-fit:contain}
+.gallery-media small{display:block;padding:.35rem .5rem;color:var(--gray);font-size:.65rem}
+.gallery-document-link{display:flex;align-items:center;min-height:90px;padding:.7rem;color:#4d7000;font-size:.76rem;font-weight:600;overflow-wrap:anywhere}
+.gallery-album-footer{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.65rem 1rem;border-top:1px solid #edf0e7;color:var(--gray);font-size:.7rem}
+.gallery-delete{padding:.35rem .55rem;border:1px solid #ead0ca;border-radius:6px;background:#fff;color:#9b3f32;font-size:.68rem;cursor:pointer}
+.gallery-delete:hover{background:#fff4f1}
+.gallery-empty{padding:2rem 1rem;border:1px dashed #bdcf8d;border-radius:12px;text-align:center;color:var(--gray);font-size:.84rem;line-height:1.6;background:rgba(255,255,255,.75)}
+.gallery-empty>span{display:block;margin-bottom:.5rem;font-size:2rem}
+.gallery-empty[hidden]{display:none}
+
+/* Solicitud de documentos: aviso de privacidad y estado de envío. */
+.request-privacy-note{margin:.25rem 0 .8rem;padding:.75rem .85rem;border-left:3px solid #75a900;border-radius:6px;background:#f5f9e7;color:#42563c;font-size:.76rem;line-height:1.6}
+.request-privacy-note a{color:#386b00;font-weight:700;overflow-wrap:anywhere}
+.request-consent-row{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.9rem;color:#354432;font-size:.8rem;line-height:1.5}
+.request-consent-row input{flex:0 0 auto;width:18px;height:18px;margin:.1rem 0 0;accent-color:#4f7e00}
+.request-consent-row label{cursor:pointer}
+.request-status{min-height:1.3rem;margin:.2rem 0 .75rem;color:#285d25;font-size:.82rem;font-weight:700;line-height:1.5}
+.request-status.is-error{color:#a12e22}
+#request-submit:disabled{opacity:.65;cursor:wait}
+.request-trap{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* Organización del talento humano en el panel administrativo. */
+.talent-section{margin:0 0 2rem}
+.talent-section:last-child{margin-bottom:0}
+.staff-intro{max-width:1000px;color:#42563c;font-size:.92rem;line-height:1.75}
+.staff-list-card{text-align:left}
+.staff-list-card h4{margin-bottom:.55rem}
+.staff-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.35rem .8rem;margin:.6rem 0 0;padding:0;list-style:none}
+.staff-list li{position:relative;padding-left:.9rem;color:#42563c;font-size:.8rem;line-height:1.5;overflow-wrap:anywhere}
+.staff-list li::before{position:absolute;left:0;color:#75a900;content:"•";font-weight:800}
+.staff-list-card p{margin-top:.55rem}
+.staff-list-card .staff-pending{color:#6c7658;font-style:italic}
+.staff-feature-card{max-width:520px;text-align:center}
+@media(max-width:640px){.staff-list{grid-template-columns:1fr}}
+
+@media(max-width:760px){
+  header{min-height:160px}
+  .hdr-title{padding:0 9rem}
+  .hdr-title h1{font-size:clamp(1.35rem,4vw,2rem)}
+  .logo-img{width:88px;height:88px}
+  .btn-solicitud{right:1rem;top:.8rem;padding:.55rem .8rem;font-size:.72rem}
+  .gallery-categories{grid-template-columns:1fr}
+  .gallery-category{padding:.85rem 1rem}
+}
+@media(max-width:640px){
+  header{min-height:0;padding:1rem;gap:.8rem}
+  .hdr-left{min-height:0;flex-direction:column;text-align:center;padding-top:58px}
+  .logo-img{top:0;left:50%;width:58px;height:58px;transform:translateX(-50%)}
+  .hdr-title{padding:0}
+  .hdr-title h1{font-size:clamp(1.3rem,6vw,1.8rem)}
+  .btn-solicitud{position:static;justify-content:center;width:100%;font-size:.82rem}
+  .hero-home{padding:2.2rem 1rem 2rem}
+  .teacher-publish{padding:1rem}
+  .gallery-albums{grid-template-columns:1fr}
+}
+/* ── AJUSTES SOLICITADOS: FONDO, ALINEACIÓN Y EMPLEADOS ── */
+body,.cbody{background:linear-gradient(125deg,#e8f4b7 0%,#fff 50%,#f1f8d2 100%)}
+#panel-historia>.hero-band,#panel-mision>.hero-band,#panel-vision>.hero-band{text-align:center}
+#panel-historia>.hero-band p,#panel-mision>.hero-band p,#panel-vision>.hero-band p{margin-left:auto;margin-right:auto}
+#panel-historia>.cbody,#panel-mision>.cbody,#panel-vision>.cbody{max-width:1200px;margin-left:auto;margin-right:auto}
+#panel-historia .history-copy{max-width:1050px;margin:0 auto;text-align:center;line-height:1.9}
+#panel-historia .history-copy strong{font-weight:800}
+#panel-historia .section-title{display:table;margin-left:auto;margin-right:auto;text-align:center}
+#panel-historia .timeline{max-width:900px;margin-left:auto;margin-right:auto}
+#panel-historia .tl-yr{font-weight:800}
+#panel-mision .cbody>.card,#panel-vision .cbody>.card{margin-left:auto;margin-right:auto;text-align:center}
+#panel-mision .cbody>.card p,#panel-vision .cbody>.card p{max-width:850px;margin-left:auto;margin-right:auto;text-align:center}
+#panel-mision .section-title,#panel-vision .section-title{display:table;margin-left:auto;margin-right:auto}
+.employee-overview-card{text-align:center;border-left:0;border-top:4px solid #a4c940}
+.employee-overview-card .card-icon{margin-bottom:.35rem}
+.employee-overview-card h3{margin-top:.25rem}
+.employee-number{display:block;margin:.2rem 0;color:#527900;font-size:1.65rem;font-weight:800}
+.employee-directory-link{max-width:760px;margin:2rem auto 0;padding:1.4rem;border:1px solid #dce9ad;border-radius:12px;background:rgba(255,255,255,.86);text-align:center}
+.employee-directory-link p{margin-bottom:1rem;color:var(--gray);font-size:.88rem;line-height:1.6}
+@media(max-width:640px){
+  #panel-historia>.cbody,#panel-mision>.cbody,#panel-vision>.cbody{padding-left:1rem;padding-right:1rem}
+  #panel-historia .history-copy{text-align:center;line-height:1.75}
+}
+/* ── VERDE INSTITUCIONAL Y TEXTO DE EMPLEADOS ── */
+:root{
+  --navy:#1a7c3e;
+  --navy2:#22a052;
+}
+body{color:#203322}
+.employee-welcome{max-width:850px;margin:0 auto;padding:clamp(1.5rem,4vw,3rem);border:1px solid #d8e9a4;border-top:5px solid #75a900;border-radius:16px;background:rgba(255,255,255,.94);box-shadow:0 10px 28px rgba(39,83,18,.1);text-align:center}
+.employee-welcome-icon{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 1rem;border-radius:50%;background:#edf7ce;font-size:2rem}
+.employee-welcome h3{margin-bottom:.8rem;color:var(--navy);font-family:'Merriweather',serif;font-size:clamp(1.2rem,2.6vw,1.65rem)}
+.employee-welcome p{max-width:680px;margin:0 auto;color:#42563c;font-size:.95rem;line-height:1.8}
+/* ── PERFILES DE TRABAJADORES ── */
+.employee-directory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:1.1rem;max-width:1120px;margin:0 auto}
+.employee-card{padding:1.5rem 1.3rem;border:1px solid #dce9ad;border-top:5px solid var(--green2);border-radius:14px;background:#fff;box-shadow:0 5px 16px rgba(26,124,62,.1);text-align:center}
+.employee-card-icon{display:grid;place-items:center;width:62px;height:62px;margin:0 auto .8rem;border-radius:50%;background:#eff8d1;font-size:1.8rem}
+.employee-role{margin-bottom:.35rem;color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.employee-card h3{margin-bottom:.55rem;color:var(--navy);font-family:'Merriweather',serif;font-size:1rem}
+.employee-card>p:last-child{color:#42563c;font-size:.82rem;line-height:1.65}
+/* Botón de solicitud en blanco para destacar sobre el encabezado verde */
+.btn-solicitud{background:#fff;color:var(--green);border:1px solid #dce9ad;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.btn-solicitud:hover{background:#f4f9e7;color:var(--navy);box-shadow:0 6px 20px rgba(0,0,0,.22)}
+
+
+/* Historia: relato y cronología en bloques centrados y legibles. */
+#panel-historia > .hero-band { text-align: center; }
+#panel-historia > .hero-band .history-intro { max-width: 760px; margin: 0 auto; }
+#panel-historia > .history-container { width: 100%; max-width: 1200px; margin: 0 auto; }
+.history-story { max-width: 1050px; margin: 0 auto 2rem; padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid #dce9ad; border-radius: 14px; background: rgba(255,255,255,.96); box-shadow: 0 6px 20px rgba(39,83,18,.08); }
+#panel-historia .history-story .history-copy { max-width: none; margin: 0 0 1rem; color: #28332b; text-align: left; line-height: 1.85; }
+#panel-historia .history-story .history-copy:last-child { margin-bottom: 0; }
+.history-timeline { max-width: 900px; margin: 0 auto; }
+.history-timeline .section-title { display: table; margin: 0 auto 1.1rem; }
+.timeline { list-style: none; }
+.tl-yr { display: block; }
+.tl-yr strong { font-weight: 800; }
+@media (max-width: 640px) {
+  #panel-historia > .history-container { padding-left: 1rem; padding-right: 1rem; }
+  #panel-historia .history-story .history-copy { line-height: 1.75; }
+}
+
